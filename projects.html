@@ -1,22 +1,151 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Projects</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+.accordion {
+    background-color: salmon;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+    
+}
+
+.active, .accordion:hover {
+    background-color: #fdbcb5;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #fdbcb5;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+p {
+  color: black;
+}
+</style>
   </head>
   <body>
-      <h1>Yasmine</h1>
+      <h1>Yasmine's Portfolio</h1>
       <ul>
-      <li><a href="index.html">Home</a></a></li>
-      <li><a href="about-me.html"> About Me</a></li>
-      <li><a href="projects.html"> Projects</a></li>
-    </ul>
-     <h2>My Projects</h2>
-     <p>Video:</p>
-     <p>Description of game and purpose:</p>
-     <p>Description of development:</p>
-     <p><strong>Link:</strong></p>
-     <p><a href="https://scratch.mit.edu/projects/245303384/">Mission for Sports Scholarships-Scrach</a></p>
+          <li><a href="index.html">Home</a></a></li>
+          <li><a href="about-me.html"> About Me</a></li>
+          <li><a href="projects.html"> Projects</a></li>
+        </ul>
+      
+      <h2>My Projects</h2>
+      
+<button class="accordion">MIT Scratch - Scratch Story</button>
+    <div class="panel">
+         <p><a href="https://scratch.mit.edu/projects/245303384/" target="_blank">"Mission for Sports Scholarships" - MIT Scratch Story </a></p>
+         <p><strong>Description of story and purpose:</strong></p>
+         <p> The purpose of the story is to choose your outcomes but make the right choice to get the sports scholorship.</p> 
+         <p><strong>Description of development and skills learned:</strong></p>
+         <p> I learned that if you use the if-else statement wrong, that the program doesn't always work correctly.</p>
+         <video controls>
+             <source src="videos/Mission_For_Sports_Scholarship.mp4" type="video/mp4">
+         </video>
+    </div>
+      
+
+<button class="accordion">MIT App Inventor - App Design Challenge</button>
+    <div class="panel">
+         <p><a href="ai2.appinventor.mit.edu/?galleryId=5792299155062784" target="_blank">"Canvas Creator" - MIT App Inventor</a></p>
+         <p><strong>Description of the app and purpose:</strong></p>
+         <p> The purpose of the app is supposed to be an easier way to create a poster template and to draw directly on a photo.</p> 
+         <p><strong>Description of development and skills learned:</strong></p>
+         <p> The development of this program was with MIT App Inventor, which is where you create an app with pre-made coding blocks. I skill from making this app was that it was easy to come up with an idea to make for the project but creating the app with limits is a way to be creative with the functions that you have to get the job done.</p>
+         <video controls>
+             <source src="videos/Canvas_Creator_App-David+Yasmine.mp4" type="video/mp4">
+         </video>
+    </div>
+
+<button class="accordion">Repl.it - Interactive Fiction Story</button>
+    <div class="panel">
+         <p><a href="https://repl.it/@yasminecorel1/TheQuestStory" target="_blank">"The Quest Story" - Repl.it</a></p>
+         <p><strong>Description of story and purpose:</strong></p>
+         <p> The story is a story that my partner and I made up about a land called ElderWood. The purpose of the story is to simulate a place and some actions to let players use text commands to control characters and influence the environment.</p> 
+         <p><strong>Description of development and skills learned:</strong></p>
+         <p> The development of this story was in Repl.it, which used Python 3.6.1. I learned that Python 3.6.1 had slightly changed from the later verions of Python, so my partner and I had to figure a way around our outdated coding and find a way to update it to the correct coding for the new version.</p>
+         <video controls>
+             <source src="videos/Repl.it_TheQuestStory.mp4" type="video/mp4">
+         </video>
+    </div>
+
+<button class="accordion">Section 4</button>
+    <div class="panel">
+         <p><a href="https://www.google.com/webhp?source=search_app" target="_blank">Section 3 Link</a></p>
+         <p><strong>Description of story and purpose:</strong></p>
+         <p> The story is about _______. The purpose of the story is to _______________________.</p> 
+         <p><strong>Description of development and skills learned:</strong></p>
+         <p> The developement of this story was ___________. I learned that __________________.</p>
+         <video controls>
+             <source src="videos/video.mp4" type="video/mp4">
+         </video>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- This is where the script for the accordian sub-section tabs start -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+      
+      
+      
+      
+      
   </body>
- 
+  
