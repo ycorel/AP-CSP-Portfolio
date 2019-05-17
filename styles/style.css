@@ -34,11 +34,15 @@ li a:hover {
 
 h1 {
   color: white;
-  background-color: green;
+  background-color: #1F8659;
   border: 1px solid black;
   text-align: center;
 }
 
 p {
-  color: green;
+  color: black;
+}
+
+h2 {
+    color: #006A3C;
 }
